@@ -1,17 +1,16 @@
 // @ts-nocheck
 import React from 'react';
-import { LoginUrl } from '../api/LoginUrl';
 import { useHistory } from 'react-router-dom';
-import { getReturnedParamsFromSpotifyAuth } from '../utils/getReturnedParams';
+
+import { LoginUrl } from '../api/LoginUrl';
+import { getReturnedParamsFromSpotifyAuth } from '../utils';
+
 export const useLogin = () => {
   const history = useHistory();
-
-
-  //** store the token inside local   */
+  //** store the token inside local storage  */
   React.useEffect(() => {
     if (window.location.hash) {
-      const { access_token, expires_in, token_type } =
-        getReturnedParamsFromSpotifyAuth(window.location.hash);
+      const { access_token } = getReturnedParamsFromSpotifyAuth(window.location.hash);
       localStorage.clear();
       localStorage.setItem("accessToken", access_token);
       history.push("/artist")
@@ -21,5 +20,6 @@ export const useLogin = () => {
   const handleLogin = () => {
     window.location = LoginUrl;
   }
+
   return { handleLogin };
 }

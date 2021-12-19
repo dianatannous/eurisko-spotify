@@ -1,7 +1,9 @@
 
+export const calculateRating=(popularity)=>{ 
+    return Math.floor(popularity*5/100);
+}
 
- //** Get  Params form url */
- export const getReturnedParamsFromSpotifyAuth = (hash) => {
+export const getReturnedParamsFromSpotifyAuth = (hash) => {
     const stringAfterHashtag = hash.substring(1);
     const paramsInUrl = stringAfterHashtag.split("&");
     const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {

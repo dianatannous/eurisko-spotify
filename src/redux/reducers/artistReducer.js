@@ -1,12 +1,13 @@
-import {ActionTypes} from '../constants/action-type';
+import { ActionTypes } from "../constants/action-type";
+
 const initialState = {
-    artists:[]
+  artists: [],
 };
-export const artistReducer = (state = initialState, {type, payload}) => {
+export const artistReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.GET_ARTISTS:
-      return {...state,artists:payload };
-     default :
-   return state;
+      return { ...state, artists: payload };
+    default:
+      return state;
   }
 };
