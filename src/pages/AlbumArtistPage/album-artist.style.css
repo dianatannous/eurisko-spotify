@@ -1,0 +1,21 @@
+.album-page {
+    padding:40px 0 80px 40px;
+    margin:0;
+}
+.album-page .title-header h3{
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: none; 
+    margin-bottom: 0px; 
+    color:#333333
+
+}
+
+.album-page .title-header h6{
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: none; 
+    margin-bottom: 0px; 
+    color:#a1a1a1
+
+}

@@ -1,0 +1,30 @@
+
+.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+.wrap button {
+ 
+  width: 350px;
+  height: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px  #888;
+  text-align: center;
+
+
+  
+  }
+
+
+ 
